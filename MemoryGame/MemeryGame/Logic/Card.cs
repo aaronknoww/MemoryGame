@@ -8,19 +8,19 @@ using System.Windows.Forms;
 
 namespace MemeryGame.Logic
 {
-    internal class Card : PictureBox
+    internal class Card : PictureBox, IComparable<Card>, IComparer<Card>
     {
         private Bitmap front;
         private Bitmap back = Properties.Resources.Girada;
+        private int _id;
             
         public Card()
         {
-            
+            _id= 0;
             this.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Size = new System.Drawing.Size(100, 100);
             this.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TabStop = false;
-            //this.Image = Properties.Resources.Girada;
             this.Image = back;
             this.Cursor = Cursors.Hand;
             this.Name = "pictureBox";
@@ -28,8 +28,9 @@ namespace MemeryGame.Logic
             
 
         }
-        public Card(Bitmap front): this()
+        public Card(int id, Bitmap front): this()
         {
+            this._id = id;  
             this.front = front;
          
         }
@@ -37,26 +38,32 @@ namespace MemeryGame.Logic
         {
             this.Image = front;
         }
+        public int getId()
+        {
+            return _id;
+        }
 
+        public int CompareTo(Card other)
+        {
+            if (other == null)                              
+                throw new NullReferenceException();
+            if (this._id == other._id && this.front == other.front)
+                return 0;
+            if (this._id > other._id)
+                return 1;
+            return -1;
+               
+        }
+
+        public int Compare(Card x, Card y)
+        {
+            if (x == null || y == null)
+                throw new NullReferenceException();
+
+            return x.CompareTo(y);             
             
+
+        }
     }
-
-    //private void ChkBoton_CheckedChanged(object? sender, EventArgs e)
-    //{
-
-    //    Control ctr = this.Parent; // Se obtine el contenedor padre de boton precionado.
-    //    Tablero tablero = (Tablero)ctr; //Se castea para saber si es un tablero.  
-    //    int numeroFila = tablero.GetRow(this);
-
-    //    if (this.Checked == true)
-    //        ISorteo.BuscarNumeros(tablero, numeroFila);
-    //    else
-    //        ISorteo.RestaurarNumeros(tablero, numeroFila);
-
-
-
-
-    //}
-
 
 }

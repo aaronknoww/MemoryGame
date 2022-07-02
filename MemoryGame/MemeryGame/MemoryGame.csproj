@@ -141,5 +141,29 @@
   <ItemGroup>
     <None Include="Imagenes\NarutoMedio.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\img1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\img2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\img12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\img13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\img14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\img15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\img16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\img18.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

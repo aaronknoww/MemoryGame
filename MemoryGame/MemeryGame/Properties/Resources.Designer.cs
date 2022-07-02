@@ -73,9 +73,9 @@ namespace MemeryGame.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Girada1 {
+        internal static System.Drawing.Bitmap img1 {
             get {
-                object obj = ResourceManager.GetObject("Girada1", resourceCulture);
+                object obj = ResourceManager.GetObject("img1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +96,76 @@ namespace MemeryGame.Properties {
         internal static System.Drawing.Bitmap img11 {
             get {
                 object obj = ResourceManager.GetObject("img11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img12 {
+            get {
+                object obj = ResourceManager.GetObject("img12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img13 {
+            get {
+                object obj = ResourceManager.GetObject("img13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img14 {
+            get {
+                object obj = ResourceManager.GetObject("img14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img15 {
+            get {
+                object obj = ResourceManager.GetObject("img15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img16 {
+            get {
+                object obj = ResourceManager.GetObject("img16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img18 {
+            get {
+                object obj = ResourceManager.GetObject("img18", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img2 {
+            get {
+                object obj = ResourceManager.GetObject("img2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

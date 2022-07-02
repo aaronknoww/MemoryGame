@@ -15,31 +15,58 @@ namespace MemeryGame.Logic
         {
             deck = new List<Card>(totalPairs * 2);
 
-            //ImageList imageList1 = new ImageList();
-            //imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            //imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            //imageList1.Images.SetKeyName(0, "img3.jpg");
-            //imageList1.Images.SetKeyName(1, "img4.jpg");
-            //imageList1.Images.SetKeyName(2, "img5.jpg");
-            //imageList1.Images.SetKeyName(3, "img6.jpg");
-            //imageList1.Images.SetKeyName(4, "img7.jpg");
-            //imageList1.Images.SetKeyName(5, "img8.jpg");
-            //imageList1.Images.SetKeyName(6, "img9.jpg");
-            //imageList1.Images.SetKeyName(7, "img10.jpg");
-            //imageList1.Images.SetKeyName(8, "img11.jpg");
-
-            //deck.ForEach( el => el = new Card());
-            for (int i = 0; i < deck.Capacity; i++)
+       
+            for (int i = 1; i <= deck.Capacity/2; i++)
             {
                 
                Bitmap front = (Bitmap)Properties.Resources.ResourceManager.GetObject("img" + i);
-                deck.Add(new Card(front));
+                deck.Add(new Card(i, front));
+                deck.Add(new Card(i, front));
             }
                 
         }
         public List<Card> getDeck()
         {
-            return deck;
+
+            shuffle();
+            return deck; 
         }
+        private void shuffle()
+        {
+            Random random = new Random();
+            Card[] temp = new Card[deck.Count];
+
+            int index = 0;
+            int totales = 0;
+            for (int i = 0; i < deck.Capacity; i++)
+            {
+
+                for (int c = 0; c < 4; c++)
+                {
+                    index = random.Next(0, deck.Count - 1);
+                    if (temp[index] == null)
+                    {
+                        totales++;
+                        temp[index] = deck[i];
+                        break;
+                    }
+                    else if (c == 3)
+                    {
+                        for (int a = 0; a < temp.Length; a++)
+                        {
+                            if (temp[a] == null)
+                            {
+                                totales++;
+                                temp[a] = deck[i];
+                                break;
+                            }
+                            totales++;
+                        }
+                    }
+                }
+            }
+            deck = temp.ToList();
+        }
+
     }
 }
