@@ -8,10 +8,11 @@ using System.Drawing;
 
 namespace MemeryGame.Logic
 {
-    internal class Deck 
+    internal class DeckMaker 
     {
-        private List<Card> deck;   
-        public Deck(int totalPairs) 
+        private List<Card> deck;
+        Game _game;
+        public DeckMaker(int totalPairs) 
         {
             deck = new List<Card>(totalPairs * 2);
 
@@ -24,6 +25,21 @@ namespace MemeryGame.Logic
                 deck.Add(new Card(i, front));
             }
                 
+        }
+        public DeckMaker(int totalPairs, Game game) 
+        {
+            this._game = game;
+            deck = new List<Card>(totalPairs * 2);
+
+
+            for (int i = 1; i <= deck.Capacity / 2; i++)
+            {
+
+                Bitmap front = (Bitmap)Properties.Resources.ResourceManager.GetObject("img" + i);
+                deck.Add(new Card(i, front, game));
+                deck.Add(new Card(i, front, game));
+            }
+
         }
         public List<Card> getDeck()
         {

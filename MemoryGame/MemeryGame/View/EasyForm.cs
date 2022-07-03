@@ -13,12 +13,29 @@ namespace MemeryGame.View
 {
     public partial class EasyForm : Form
     {
-        Board board;
+        
+        Game game;
         public EasyForm()
         {
             InitializeComponent();
-            board = new Board(4,4);
-            pnlFather.Controls.Add(board);
+
+            game = new Game(4, 4);
+            this.lblSetPair.Text = game.PairRemain.ToString();
+            pnlFather.Controls.Add(game.Board);
+        }
+
+        private void tmrShowCard_Tick(object sender, EventArgs e)
+        {
+            game.coverBoth();
+            tmrShowCard.Stop();
+            pnlFather.Enabled = true;
+        }
+
+        private void pnlFather_EnabledChanged(object sender, EventArgs e)
+        {
+            if (pnlFather.Enabled)
+                return;
+            tmrShowCard.Start();
         }
     }
 }

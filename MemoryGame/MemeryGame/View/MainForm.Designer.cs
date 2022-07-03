@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label lblTitle;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlPrincipal = new System.Windows.Forms.Panel();
@@ -42,12 +43,25 @@
             this.pbDificil = new System.Windows.Forms.PictureBox();
             this.pbMedium = new System.Windows.Forms.PictureBox();
             this.pbEasy = new System.Windows.Forms.PictureBox();
+            this.tmShowCard = new System.Windows.Forms.Timer(this.components);
             lblTitle = new System.Windows.Forms.Label();
             this.pnlPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDificil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMedium)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEasy)).BeginInit();
             this.SuspendLayout();
+            // 
+            // lblTitle
+            // 
+            lblTitle.AutoSize = true;
+            lblTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lblTitle.ForeColor = System.Drawing.Color.Black;
+            lblTitle.Location = new System.Drawing.Point(371, 44);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new System.Drawing.Size(504, 69);
+            lblTitle.TabIndex = 10;
+            lblTitle.Text = "MEMORY GAME";
             // 
             // pnlTitulo
             // 
@@ -188,17 +202,10 @@
             this.pbEasy.TabStop = false;
             this.pbEasy.Click += new System.EventHandler(this.pbEasy_Click);
             // 
-            // lblTitle
+            // tmShowCard
             // 
-            lblTitle.AutoSize = true;
-            lblTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lblTitle.ForeColor = System.Drawing.Color.Black;
-            lblTitle.Location = new System.Drawing.Point(371, 44);
-            lblTitle.Name = "lblTitle";
-            lblTitle.Size = new System.Drawing.Size(504, 69);
-            lblTitle.TabIndex = 10;
-            lblTitle.Text = "MEMORY GAME";
+            this.tmShowCard.Interval = 500;
+            this.tmShowCard.Tick += new System.EventHandler(this.tmShowCard_Tick);
             // 
             // Main
             // 
@@ -238,6 +245,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblFacil;
+        public  System.Windows.Forms.Timer tmShowCard;
     }
 }
 

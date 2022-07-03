@@ -52,7 +52,8 @@
     <Compile Include="Logic\Card.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Logic\Deck.cs" />
+    <Compile Include="Logic\DeckMaker.cs" />
+    <Compile Include="Logic\Game.cs" />
     <Compile Include="View\EasyForm.cs">
       <SubType>Form</SubType>
     </Compile>

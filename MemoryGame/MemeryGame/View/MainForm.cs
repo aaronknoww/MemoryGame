@@ -1,4 +1,5 @@
-﻿using MemeryGame.View;
+﻿using MemeryGame.Logic;
+using MemeryGame.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace MemeryGame
     public partial class Main : Form
     {
         private Form formaActiva;
+        
         public Main()
         {
             InitializeComponent();
@@ -55,6 +57,11 @@ namespace MemeryGame
             this.pnlPrincipal.Tag = formaActiva;
             formaActiva.BringToFront();
             formaActiva.Show();
+        }
+
+        private void tmShowCard_Tick(object sender, EventArgs e)
+        {
+
         }
     }
 }
