@@ -30,7 +30,8 @@ namespace MemeryGame
 
         private void pbMedium_Click(object sender, EventArgs e)
         {
-
+            MediumForm medium = new MediumForm();
+            loadForm(medium);   
         }
 
         private void pbDificil_Click(object sender, EventArgs e)
