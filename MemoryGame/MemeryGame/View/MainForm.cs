@@ -24,7 +24,6 @@ namespace MemeryGame
         private void pbEasy_Click(object sender, EventArgs e)
         {
             EasyForm easy= new EasyForm();
-          // easy.Show();
             loadForm(easy);
 
         }
@@ -45,7 +44,7 @@ namespace MemeryGame
             {
                 formaActiva.Close();
             }
-            //Activate();
+            
             formaActiva = hija;
 
             //// Configuracion de la forma hija, para que se adapte al panel del menupricipal. 
@@ -59,9 +58,10 @@ namespace MemeryGame
             formaActiva.Show();
         }
 
-        private void tmShowCard_Tick(object sender, EventArgs e)
+   
+        private void btnMenu_Click(object sender, EventArgs e)
         {
-
+            formaActiva?.Close();
         }
     }
 }

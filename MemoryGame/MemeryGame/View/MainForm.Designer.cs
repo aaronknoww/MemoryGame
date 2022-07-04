@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label lblTitle;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMenu = new System.Windows.Forms.Button();
             this.pnlPrincipal = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,8 +44,9 @@
             this.pbDificil = new System.Windows.Forms.PictureBox();
             this.pbMedium = new System.Windows.Forms.PictureBox();
             this.pbEasy = new System.Windows.Forms.PictureBox();
-            this.tmShowCard = new System.Windows.Forms.Timer(this.components);
             lblTitle = new System.Windows.Forms.Label();
+            this.pnlTitulo.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.pnlPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDificil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMedium)).BeginInit();
@@ -57,7 +59,7 @@
             lblTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             lblTitle.ForeColor = System.Drawing.Color.Black;
-            lblTitle.Location = new System.Drawing.Point(371, 44);
+            lblTitle.Location = new System.Drawing.Point(378, 0);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new System.Drawing.Size(504, 69);
             lblTitle.TabIndex = 10;
@@ -66,26 +68,43 @@
             // pnlTitulo
             // 
             this.pnlTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.pnlTitulo.Controls.Add(lblTitle);
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTitulo.Location = new System.Drawing.Point(0, 0);
+            this.pnlTitulo.Location = new System.Drawing.Point(155, 0);
             this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(1382, 70);
+            this.pnlTitulo.Size = new System.Drawing.Size(1227, 67);
             this.pnlTitulo.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.btnMenu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 70);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(155, 738);
+            this.panel1.Size = new System.Drawing.Size(155, 808);
             this.panel1.TabIndex = 2;
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu.ForeColor = System.Drawing.Color.Maroon;
+            this.btnMenu.Location = new System.Drawing.Point(3, 288);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(146, 135);
+            this.btnMenu.TabIndex = 0;
+            this.btnMenu.Text = "MENU";
+            this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // pnlPrincipal
             // 
             this.pnlPrincipal.BackColor = System.Drawing.Color.Transparent;
             this.pnlPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlPrincipal.Controls.Add(lblTitle);
+            this.pnlPrincipal.Controls.Add(this.label6);
             this.pnlPrincipal.Controls.Add(this.label5);
             this.pnlPrincipal.Controls.Add(this.label4);
             this.pnlPrincipal.Controls.Add(this.label3);
@@ -97,16 +116,27 @@
             this.pnlPrincipal.Controls.Add(this.pbEasy);
             this.pnlPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlPrincipal.Location = new System.Drawing.Point(155, 70);
+            this.pnlPrincipal.Location = new System.Drawing.Point(155, 67);
             this.pnlPrincipal.Name = "pnlPrincipal";
-            this.pnlPrincipal.Size = new System.Drawing.Size(1227, 738);
+            this.pnlPrincipal.Size = new System.Drawing.Size(1227, 741);
             this.pnlPrincipal.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(541, 31);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(183, 69);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Menu";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(880, 473);
+            this.label5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label5.Location = new System.Drawing.Point(880, 400);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(151, 38);
             this.label5.TabIndex = 9;
@@ -116,7 +146,8 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(540, 473);
+            this.label4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label4.Location = new System.Drawing.Point(540, 400);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(151, 38);
             this.label4.TabIndex = 8;
@@ -126,7 +157,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(186, 473);
+            this.label3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label3.Location = new System.Drawing.Point(186, 400);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(151, 38);
             this.label3.TabIndex = 7;
@@ -136,7 +168,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(857, 230);
+            this.label2.Location = new System.Drawing.Point(857, 157);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(185, 38);
             this.label2.TabIndex = 6;
@@ -146,7 +178,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(505, 227);
+            this.label1.Location = new System.Drawing.Point(505, 154);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(231, 38);
             this.label1.TabIndex = 5;
@@ -156,7 +188,7 @@
             // 
             this.lblFacil.AutoSize = true;
             this.lblFacil.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFacil.Location = new System.Drawing.Point(170, 230);
+            this.lblFacil.Location = new System.Drawing.Point(170, 157);
             this.lblFacil.Name = "lblFacil";
             this.lblFacil.Size = new System.Drawing.Size(188, 38);
             this.lblFacil.TabIndex = 4;
@@ -168,7 +200,7 @@
             this.pbDificil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbDificil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbDificil.Image = ((System.Drawing.Image)(resources.GetObject("pbDificil.Image")));
-            this.pbDificil.Location = new System.Drawing.Point(853, 269);
+            this.pbDificil.Location = new System.Drawing.Point(853, 196);
             this.pbDificil.Name = "pbDificil";
             this.pbDificil.Size = new System.Drawing.Size(200, 185);
             this.pbDificil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -181,7 +213,7 @@
             this.pbMedium.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbMedium.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbMedium.Image = ((System.Drawing.Image)(resources.GetObject("pbMedium.Image")));
-            this.pbMedium.Location = new System.Drawing.Point(524, 269);
+            this.pbMedium.Location = new System.Drawing.Point(524, 196);
             this.pbMedium.Name = "pbMedium";
             this.pbMedium.Size = new System.Drawing.Size(200, 185);
             this.pbMedium.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -194,18 +226,13 @@
             this.pbEasy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbEasy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbEasy.Image = ((System.Drawing.Image)(resources.GetObject("pbEasy.Image")));
-            this.pbEasy.Location = new System.Drawing.Point(165, 269);
+            this.pbEasy.Location = new System.Drawing.Point(165, 196);
             this.pbEasy.Name = "pbEasy";
             this.pbEasy.Size = new System.Drawing.Size(200, 185);
             this.pbEasy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbEasy.TabIndex = 1;
             this.pbEasy.TabStop = false;
             this.pbEasy.Click += new System.EventHandler(this.pbEasy_Click);
-            // 
-            // tmShowCard
-            // 
-            this.tmShowCard.Interval = 500;
-            this.tmShowCard.Tick += new System.EventHandler(this.tmShowCard_Tick);
             // 
             // Main
             // 
@@ -216,12 +243,15 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1382, 808);
             this.Controls.Add(this.pnlPrincipal);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlTitulo);
+            this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Memory Game";
+            this.pnlTitulo.ResumeLayout(false);
+            this.pnlTitulo.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.pnlPrincipal.ResumeLayout(false);
             this.pnlPrincipal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDificil)).EndInit();
@@ -245,7 +275,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblFacil;
-        public  System.Windows.Forms.Timer tmShowCard;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnMenu;
     }
 }
 

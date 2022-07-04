@@ -12,16 +12,17 @@ namespace MemeryGame.Logic
         private int        moveCounter;
         private int        pairRemain;
         private Board      board;
-        private DeckMaker  deck;
         private int        _rows;
         private int        _columns;
         private Card       card1;
         private Card       card2;
         private byte       cardFlip;
+        private short      seconds;
         
 
         public Game(int rows, int columns)
         {
+            Seconds = 60;
             cardFlip = 0;
             moveCounter = 0;
             pairRemain = (rows * columns) / 2;
@@ -79,10 +80,22 @@ namespace MemeryGame.Logic
             card1 = null;
             card2 = null;
         }
-
         
+        public void restartGame() 
+        {
+            board.Dispose();
+            board = null;
+            card1 = null;
+            card2 = null;           
+            Seconds = 60;
+            cardFlip = 0;
+            moveCounter = 0;
+            pairRemain = (_rows * _columns) / 2;                       
+            board = new Board(_rows, _columns, this);
+        }
         public Board Board { get { return board; } }
         public int MoveCounter { get => moveCounter; set => moveCounter = value; }
         public int PairRemain { get => pairRemain; set => pairRemain = value; }
+        public short Seconds { get => seconds; set => seconds = value; }
     }
 }

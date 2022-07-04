@@ -50,11 +50,19 @@ namespace MemeryGame.Logic
                 return;
             if(_game.checkPair(this)==3)
             {
-                Control ctr = this.Parent.Parent; // Se obtine el contenedor padre de boton precionado.
+                Control ctr = this.Parent.Parent; // Se obtiene el contenedor padre de boton precionado.
                 Panel panel  = (Panel)ctr;
+                panel.Enabled = false;
+                panel.Enabled = true;
                 panel.Enabled = false;
                 return;
             }
+            Control ctrl = this.Parent.Parent.Parent;
+            Form form = (Form)ctrl;
+            var c = form.Controls;
+            int index = c.IndexOfKey("lblMove");
+            c[index].Enabled = false;
+            c[index].Enabled = true;
         }
        
 
