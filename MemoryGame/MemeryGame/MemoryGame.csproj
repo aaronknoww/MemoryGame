@@ -60,6 +60,12 @@
     <Compile Include="View\EasyForm.Designer.cs">
       <DependentUpon>EasyForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\HardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HardForm.Designer.cs">
+      <DependentUpon>HardForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="View\EasyForm.resx">
       <DependentUpon>EasyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HardForm.resx">
+      <DependentUpon>HardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

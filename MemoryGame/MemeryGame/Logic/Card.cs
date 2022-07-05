@@ -60,7 +60,7 @@ namespace MemeryGame.Logic
             Control ctrl = this.Parent.Parent.Parent;
             Form form = (Form)ctrl;
             var c = form.Controls;
-            int index = c.IndexOfKey("lblMove");
+            int index = c.IndexOfKey("lblMove"); //Se obtiene el indice del elemento que tenga esa clave.
             c[index].Enabled = false;
             c[index].Enabled = true;
         }

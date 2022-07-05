@@ -11,15 +11,14 @@ using System.Windows.Forms;
 
 namespace MemeryGame.View
 {
-    public partial class EasyForm : Form
+    public partial class HardForm : Form
     {
-        
         Game game;
-        public EasyForm()
+        public HardForm()
         {
             InitializeComponent();
 
-            game = new Game(4, 4);
+            game = new Game(5, 6);
             pnlFather.Controls.Add(game.Board);
             lblSetPair.Text = game.PairRemain.ToString();
             lblSetCount.Text = game.MoveCounter.ToString();
@@ -28,7 +27,7 @@ namespace MemeryGame.View
 
         private void tmrShowCard_Tick(object sender, EventArgs e)
         {
-            
+
             game.coverBoth();
             tmrShowCard.Stop();
             pnlFather.Enabled = true;
@@ -46,7 +45,7 @@ namespace MemeryGame.View
         private void tmrSeconds_Tick(object sender, EventArgs e)
         {
             game.Seconds--;
-            lblSetTime.Text = game.Seconds.ToString()+" seconds";
+            lblSetTime.Text = game.Seconds.ToString() + " seconds";
             if (game.Seconds <= 0)
             {
                 tmrSeconds.Stop();
@@ -58,7 +57,7 @@ namespace MemeryGame.View
         {
             lblSetPair.Text = game.PairRemain.ToString();
             lblSetCount.Text = game.MoveCounter.ToString();
-            if(game.PairRemain <= 0)
+            if (game.PairRemain <= 0)
             {
                 tmrSeconds.Stop();
                 tmrShowCard.Stop();
@@ -76,5 +75,6 @@ namespace MemeryGame.View
             tmrSeconds.Start();
 
         }
+
     }
 }

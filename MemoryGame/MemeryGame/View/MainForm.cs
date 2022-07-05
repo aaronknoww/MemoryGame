@@ -1,13 +1,5 @@
-﻿using MemeryGame.Logic;
-using MemeryGame.View;
+﻿using MemeryGame.View;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MemeryGame
@@ -36,7 +28,8 @@ namespace MemeryGame
 
         private void pbDificil_Click(object sender, EventArgs e)
         {
-
+            HardForm hard = new HardForm();
+            loadForm(hard);
         }
         private void loadForm(Form hija)
         {
